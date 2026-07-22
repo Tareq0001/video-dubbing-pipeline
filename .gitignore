@@ -1,6 +1,21 @@
-﻿venv/
+# Byte-compiled / optimized / DLL files
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+
+# Environment
 .env
-.DS_Store
-node_modules/
+.venv
+env/
+venv/
+ENV/
+
+# Output
+*.mp4
+*.wav
+temp_audio.wav
+temp_audio_translated.wav
+
+# IDEs
+.vscode/
+.idea/

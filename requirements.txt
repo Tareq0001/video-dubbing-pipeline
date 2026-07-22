@@ -1,5 +1,7 @@
-# For the MVP, no external libraries are needed.
-# Real implementation might use:
-# whisper
-# ffmpeg-python
-# elevenlabs
+# Video Dubbing Pipeline Requirements
+pytest==7.4.0
+moviepy==1.0.3
+pydub==0.25.1
+openai==1.3.0
+elevenlabs==0.2.26
+python-dotenv==1.0.0

@@ -1,18 +1,55 @@
-# Automated Video Dubbing Pipeline
+# Video Dubbing Pipeline
 
-This project demonstrates a multi-step AI pipeline for dubbing videos into another language while attempting to sync the speaker's lip movements.
+![Build Status](https://github.com/username/video_dubbing_pipeline/actions/workflows/ci.yml/badge.svg)
+![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
 
-## Concept
-The pipeline works in several stages:
-1. Audio Extraction
-2. Speech-to-Text (Transcription)
-3. Text Translation
-4. Text-to-Speech (Voice Generation/Cloning)
-5. Video/Audio Lip Sync (using computer vision)
+A professional, fully automated pipeline for translating and dubbing video content into multiple languages.
 
-*This is a mock implementation showing the architectural flow.*
+## Features
 
-## How to run
-```bash
-python dubber.py
+- **Audio Extraction**: Cleanly separate audio from video sources.
+- **Translation**: Accurate text translation using state-of-the-art models.
+- **TTS Generation**: High-quality text-to-speech generation.
+- **Video Assembly**: Merge translated audio back into the original video with precise syncing.
+
+## Architecture
+
+```mermaid
+graph TD;
+    A[Input Video] --> B[Audio Extraction];
+    B --> C[Speech to Text];
+    C --> D[Translation];
+    D --> E[Text to Speech];
+    E --> F[Audio/Video Merge];
+    F --> G[Output Dubbed Video];
 ```
+
+## Quick Start
+
+1. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Set up environment variables:
+   ```bash
+   cp .env.example .env
+   # Edit .env with your API keys
+   ```
+
+3. Run the pipeline:
+   ```bash
+   python src/pipeline.py
+   ```
+
+## Testing
+
+Run tests with pytest:
+```bash
+pytest tests/
+```
+
+## License
+
+This project is licensed under the MIT License.
