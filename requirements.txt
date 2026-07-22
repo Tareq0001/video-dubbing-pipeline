@@ -1,0 +1,5 @@
+# For the MVP, no external libraries are needed.
+# Real implementation might use:
+# whisper
+# ffmpeg-python
+# elevenlabs
